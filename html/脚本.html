@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"> 
+<title>菜鸟教程(runoob.com)</title> 
+</head>
+<body>
+
+<script>
+document.write("Hello World!")
+</script> 
+<noscript>抱歉，你的浏览器不支持 JavaScript!</noscript>
+
+
+<h1>我的第一个 JavaScript </h1>
+
+<p id="demo">
+JavaScript 可以触发事件，就像按钮点击。</p>
+<p id="demo1">
+    我是一个标题a&#768;O&#769;&#39;&#34; ;
+</p>
+<script>
+function myFunction()
+{
+    x=document.getElementById("demo")
+    x.innerHTML="Hello JavaScrip!";
+}
+function colorChange()
+{
+    x=document.getElementById("demo1")
+    x.style.color="#ff0000";
+}
+</script>
+
+<button type="button" onclick="myFunction()">点我</button>
+<button type="button" onclick="colorChange()">换个颜色</button>
+
+<p>不支持 JavaScript 的浏览器会使用 &lt;noscript&gt; 元素中定义的内容（文本）来替代。</p>
+ 
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"> 
+<title>菜鸟教程(runoob.com)</title> 
+<script>
+    function clickCounter()
+    {
+        if(typeof(Storage)!=="undefined")
+        {
+            if (localStorage.clickcount)
+            {
+                localStorage.clickcount=Number(localStorage.clickcount)+1;
+            }
+            else
+            {
+                localStorage.clickcount=1;
+            }
+            document.getElementById("result1").innerHTML=" 你已经点击了按钮 " + localStorage.clickcount + " 次 ";
+        }
+        else
+        {
+            document.getElementById("result1").innerHTML="对不起，您的浏览器不支持 web 存储。";
+        }
+    }
+    </script>
+<script>
+    function clickCounter1()
+    {
+        if(typeof(Storage)!=="undefined")
+        {
+            if (sessionStorage.clickcount)
+            {
+                sessionStorage.clickcount=Number(sessionStorage.clickcount)+1;
+            }
+            else
+            {
+                sessionStorage.clickcount=1;
+            }
+            document.getElementById("result2").innerHTML="在这个会话中你已经点击了该按钮 " + sessionStorage.clickcount + " 次 ";
+        }
+        else
+        {
+            document.getElementById("result2").innerHTML="抱歉，您的浏览器不支持 web 存储";
+        }
+    }
+    </script>
+</head>
+<body>
+
+<div id="result"></div>
+<div id="result1"></div>
+<p><button onclick="clickCounter()"type = "button">点击</button></p>
+<p>该按钮查看localStorage计数器的增加。</p>
+<div id="result2"></div>
+<p><button onclick="clickCounter1()" type="button">点击</button></p>
+<p>该按钮查看sessionStorage 计数器的增加。</p>
+<script>
+if(typeof(Storage)!=="undefined")
+{
+
+  localStorage.sitename="菜鸟教程";
+  document.getElementById("result").innerHTML="网站名：" + localStorage.sitename;
+  
+}
+else
+{
+  document.getElementById("result").innerHTML="对不起，您的浏览器不支持 web 存储。";
+}
+</script>
+
+</body>
+</html>

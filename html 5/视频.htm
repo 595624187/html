@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" hr> 
+<title>菜鸟教程(runoob.com)</title> 
+<base href="https://www.runoob.com/try/demo_source/">
+</head>
+<body>
+ 
+<video width="320" height="240" style="align-self: auto" controls>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+  你的浏览器不支持 video 标签。
+</video>
+
+<div style="text-align:left"> 
+    <button onclick="playPause()">播放/暂停</button> 
+    <button onclick="makeBig()">放大</button>
+    <button onclick="makeSmall()">缩小</button>
+    <button onclick="makeNormal()">普通</button>
+    <button onclick="makevoice1()">-</button>
+    <button onclick="makevoice2()">+</button>
+    <br> 
+    <video id="video1" width="420">
+      <source src="mov_bbb.mp4" type="video/mp4">
+      <source src="mov_bbb.ogg" type="video/ogg">
+      您的浏览器不支持 HTML5 video 标签。
+    </video>
+  </div> 
+  <audio controls>
+    <source src="horse.ogg" type="audio/ogg">
+    <source src="horse.mp3" type="audio/mpeg">
+  您的浏览器不支持 audio 元素。
+  </audio>
+  <script> 
+    var myVideo=document.getElementById("video1"); 
+    function playPause()
+    { 
+        if (myVideo.paused) 
+          myVideo.play(); 
+        else 
+          myVideo.pause(); 
+    } 
+    
+        function makeBig()
+    { 
+        myVideo.width+=100; 
+    } 
+    
+        function makeSmall()
+    { 
+        myVideo.width-=100; 
+    } 
+    
+        function makeNormal()
+    { 
+        myVideo.width=420; 
+    } 
+     function makevoice1()
+        {
+          myVideo.volume-=0.2
+        }
+        function makevoice2()
+        {
+          myVideo.volume+=0.2
+        }
+    </script> 
+</body>
+</html>
